@@ -14,7 +14,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # MongoDB configuration
-app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb://admin:password123@192.168.1.3:27017/patient_db?authSource=admin")
+app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb://admin:password123@192.168.1.3:27017")
 mongo = PyMongo(app)
 
 # Helper function to convert ObjectId to string
